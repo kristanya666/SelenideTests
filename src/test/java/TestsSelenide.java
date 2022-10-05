@@ -10,7 +10,7 @@ public class TestsSelenide {
     void shouldOpenURL() {
         open("http://localhost:9999");
 
-        SelenideElement form = $(byXpath("//*[@id=\"root\"]/div/form"));
+        SelenideElement form = $("form.form");
         form.$("[data-test-id=name] input").setValue("Константин");
         form.$("[data-test-id=phone] input").setValue("+79969590415");
         form.$("[data-test-id=agreement]").click();
